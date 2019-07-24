@@ -3,21 +3,26 @@ import TodoItems from "./TodoItems";
 import "./TodoList.css";
 
 
+
 class TodoList extends Component {
 
   constructor(props, context) {
     super(props, context);
+    console.log('props', props);
+    console.log('context', context);
 
     this.state = {
       items: []
     };
 
-    // this.addItem = this.addItem.bind(this);
+    this.addItem = this.addItem.bind(this);
     this.deleteItem = this.deleteItem.bind(this);
   }
 
 
   addItem(e) {
+    console.log('event: ', e);
+
     var itemArray = this.state.items;
 
     if (this._inputElement.value !== "") {

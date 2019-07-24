@@ -1,10 +1,13 @@
 import React, {Component} from 'react';
 
 
+
 class TodoItems extends Component {
 
   constructor(props, context) {
     super(props, context);
+    console.log('props: ', props);
+    console.log('context: ', context);
 
     this.createTasks = this.createTasks.bind(this);
   }
@@ -36,7 +39,7 @@ class TodoItems extends Component {
       </ul>
     );
   }
-};
+}
 
 
 export default TodoItems;
